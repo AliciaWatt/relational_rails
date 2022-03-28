@@ -1,11 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'athletes index page' do
+RSpec.describe 'Coaches athlete index' do
   it 'displays the list of athletes' do
-    athlete = Athlete.create!(name: 'Jo Mayo', athlete_of: 2, championship_qualifier: true)
-    athlete_2 = Athlete.create!(name: 'Ash Wedneday', athlete_of: 1, championship_qualifier: true)
-    athlete_3 = Athlete.create!(name: 'Staniel Stanski', athlete_of: 2, championship_qualifier: true)
-    athlete_4 = Athlete.create!(name: 'Merk Andrews', athlete_of: 3, championship_qualifier: false)
+    coach = Coach.create!(name: 'Missy Franklin')
+    athlete = coach.athletes.create!(name: 'Jo Mayo', rank: 2, championship_qualifier: true)
+    athlete_2 = coach.athletes.create!(name: 'Ash Wedneday', rank: 1, championship_qualifier: true)
+    athlete_3 = coach.athletes.create!(name: 'Staniel Stanski', rank: 3, championship_qualifier: true)
+    athlete_4 = coach.athletes.create!(name: 'Merk Andrews', rank: 4, championship_qualifier: false)
 
     visit "/athletes"
 
