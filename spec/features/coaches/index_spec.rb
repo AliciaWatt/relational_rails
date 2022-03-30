@@ -4,7 +4,7 @@ RSpec.describe 'coaches index page' do
   it 'displays the list of coaches' do
     doc = Coach.create!(name: 'Doc McStuffins', club: "Bruins", recruiting_athletes: true, years_experience: 20)
     franklin = Coach.create!(name: "Missy Franklin", club: "Dolphins", recruiting_athletes: true, years_experience: 2)
-    federer = Coach.create!(name: "Roger Federer", club: "Aces", recruiting_athletes: false, years_experience: 15)
+    federer = Coach.create!(name: "Roger Federer", club: "Aces", recruiting_athletes: true, years_experience: 15)
 
     visit '/coaches'
 
@@ -12,5 +12,17 @@ RSpec.describe 'coaches index page' do
     expect(page).to have_content(doc.name)
     expect(page).to have_content(franklin.name)
     expect(page).to have_content(federer.name)
+  end
+
+  scenario 'visitor sees records ordered by #created_at with timestamp' do
+    doc = Coach.create!(name: 'Doc McStuffins', club: "Bruins", recruiting_athletes: true, years_experience: 20)
+    franklin = Coach.create!(name: "Missy Franklin", club: "Dolphins", recruiting_athletes: true, years_experience: 2)
+    federer = Coach.create!(name: "Roger Federer", club: "Aces", recruiting_athletes: true, years_experience: 15)
+
+    visit '/coaches'
+
+    expect(page).to have_content(doc.created_at)
+    expect(page).to have_content(franklin.created_at)
+    expect(page).to have_content(federer.created_at)
   end
 end
