@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Coaches athlete index' do
+RSpec.describe 'athlete index' do
   it 'displays the list of athletes' do
     franklin = Coach.create!(name: 'Missy Franklin')
     doc = Coach.create!(name: 'Doc McStuffins')
@@ -10,7 +10,7 @@ RSpec.describe 'Coaches athlete index' do
     andrews = doc.athletes.create!(name: 'Merk Andrews', rank: 12, championship_qualifier: false)
 
     visit "/athletes"
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content(mayo.name)
     expect(page).to have_content(mayo.rank)
     expect(page).to have_content(mayo.championship_qualifier)
