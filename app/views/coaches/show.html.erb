@@ -14,4 +14,5 @@
 </body>
 <footer>
    <%= link_to "Update Coach Info", "/coaches/#{@coach.id}/edit" %>
+   <%= button_to "Delete this Coach", "/coaches/#{@coach.id}", method: :delete %>
 </footer>
