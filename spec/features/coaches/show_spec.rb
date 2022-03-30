@@ -33,5 +33,21 @@ RSpec.describe 'coaches show page' do
     expect(page).to have_content("Total Number of Athletes")
   end
 
+  it 'displays a link to take user to Coaches Index' do
+    doc = Coach.create!(name: 'Doc McStuffins', club: "Bruins", recruiting_athletes: true, years_experience: 20)
+    franklin = Coach.create!(name: "Missy Franklin", club: "Dolphins", recruiting_athletes: true, years_experience: 2)
+    federer = Coach.create!(name: "Roger Federer", club: "Aces", recruiting_athletes: true, years_experience: 15)
+    mac = Coach.create!(name: "Mac Demarco", club: "Boomers", recruiting_athletes: true, years_experience: 10)
+    mayo = franklin.athletes.create!(name: 'Jo Mayo', rank: 2, championship_qualifier: true)
+    wednesday = franklin.athletes.create!(name: 'Ash Wedneday', rank: 1, championship_qualifier: true)
+    stanski = doc.athletes.create!(name: 'Staniel Stanski', rank: 3, championship_qualifier: true)
+    andrews = doc.athletes.create!(name: 'Merk Andrews', rank: 12, championship_qualifier: false)
+    moons = federer.athletes.create!(name: 'Meg Moons', rank:22, championship_qualifier: false)
 
+    visit "/coaches/#{federer.id}"
+
+    click_link "Coaches"
+
+    expect(current_path).to eq('/coaches')
+  end
 end
