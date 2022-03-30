@@ -9,3 +9,8 @@
   <li><p>Championship Qualifier? <%= @athlete.championship_qualifier %></p></li>
   </ul>
   </body>
+
+  <footer>
+    <%= link_to "Update Information", "/athletes/#{@athlete.id}/edit" %>
+    <%= button_to "Delete this Athlete", "/athletes/#{@athlete.id}", method: :delete %>
+  </footer>

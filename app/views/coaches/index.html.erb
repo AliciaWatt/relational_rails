@@ -2,9 +2,18 @@
 <header>
   <%= link_to "Coaches", "/coaches" %>
   <%= link_to "Athletes", '/athletes' %>
+
 </header>
+
 <body>
 <% @coaches.desc_order.each do |coach| %>
 <h3><%= coach.name %> - Created at: <%=coach.created_at %></h3>
+<p>Club: <%= coach.club %></p>
+<p>Years Experience: <%= coach.years_experience %></p>
+<p>Recruiting Athletes: <%= coach.recruiting_athletes %></p>
 <% end %>
 </body>
+  <%= link_to "Create New Coach", '/coaches/new' %>
+<footer>
+
+</footer>

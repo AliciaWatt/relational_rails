@@ -3,8 +3,6 @@
   <%= link_to "Athletes", "/athletes" %>
 </header>
 <body>
-
-
 <h1> Coach <%= "#{@coach.name}" %></h1>
 <h2><%= "#{@coach.club}" %> Roster </h2>
 <% @athletes.each do |athlete| %>
@@ -13,6 +11,8 @@
   <li><p> Rank: <%=  athlete.rank %></p></li>
   <li><p> Championship Qualifier? <%= athlete.championship_qualifier %></p></li>
 </ul>
-<%= link_to athlete.name, "/athletes/#{athlete.id}" %>
 <% end %>
 </body>
+<footer>
+   <%= link_to "Create New Athlete", "/coaches/#{@coach.id}/athletes/new" %>
+</footer>

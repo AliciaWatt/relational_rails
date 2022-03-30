@@ -1,0 +1,19 @@
+<%= form_with url:"/coaches/#{@coach.id}", method: :patch, local: true do |form| %>
+<p>
+   <%= form.label :name %>
+   <%= form.text_field :name %>
+</p>
+<p>
+    <%= form.label :club %>
+    <%= form.text_field :club %>
+</p>
+<p>
+   <%= form.label :"Years Experience" %>
+   <%= form.number_field :years_experience %>
+</p>
+<p>
+   <%= form.label :"Recruiting Athletes" %>
+   <%= form.check_box :recruiting_athletes %>
+</p>
+<%= form.submit "Submit" %>
+<% end %>

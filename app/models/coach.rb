@@ -9,4 +9,8 @@ class Coach < ApplicationRecord
   def number_of_athletes
     self.athletes.count
   end
+
+  def alphabetize
+    athletes.order(:name)
+  end
 end
