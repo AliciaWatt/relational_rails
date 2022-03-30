@@ -1,5 +1,6 @@
 <header>
   <%= link_to "Coaches", "/coaches" %>
+  <%= link_to "Athletes", '/athletes' %>
 
 </header>
 <body>
@@ -9,5 +10,6 @@
 <p>Years of Experience: <%= @coach.years_experience %></p>
 <p>Total Number of Athletes: <%= @coach.number_of_athletes %></p>
 <p>Recruiting: <%= @coach.recruiting_athletes %></p>
-
+<br>
+  <%= link_to "View this Coach's Roster", "/coaches/#{@coach.id}/athletes" %>
 </body>
