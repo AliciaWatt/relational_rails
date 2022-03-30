@@ -21,4 +21,23 @@ RSpec.describe 'athlete index' do
     expect(page).to have_content(andrews.rank)
     expect(page).to have_content(andrews.championship_qualifier)
   end
+
+
+    scenario 'visitor sees a link to Coaches index' do
+
+      visit "/athletes"
+
+      click_link "Coaches"
+
+      expect(current_path).to eq('/coaches')
+    end
+
+    scenario 'visitor sees a link to Athletes Index' do
+
+      visit "/athletes"
+
+      click_on "Athletes"
+
+      expect(current_path).to eq('/athletes')
+    end
 end

@@ -39,6 +39,8 @@ RSpec.describe 'coaches index page' do
 
   scenario 'visitor sees a link to Athletes Index' do
 
+    visit '/coaches'
+
     click_on "Athletes"
 
     expect(current_path).to eq('/athletes')
