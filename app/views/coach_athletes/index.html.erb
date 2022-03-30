@@ -1,3 +1,10 @@
+<h1> Coach <%= "#{@coach.name}" %></h1>
+<h2><%= "#{@coach.club}" %> Roster </h2>
 <% @athletes.each do |athlete| %>
+<ul>
+  <li><h3><%= athlete.name %></h3></li>
+  <li><p> Rank: <%=  athlete.rank %></p></li>
+  <li><p> Championship Qualifier? <%= athlete.championship_qualifier %></p></li>
+</ul>
 <%= link_to athlete.name, "/athletes/#{athlete.id}" %>
 <% end %>
