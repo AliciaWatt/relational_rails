@@ -11,7 +11,7 @@ RSpec.describe 'athletes show page' do
 
     visit "/athletes/#{stanski.id}"
 
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content(stanski.name)
     expect(page).to have_content(stanski.rank)
     expect(page).to have_content(stanski.championship_qualifier)
