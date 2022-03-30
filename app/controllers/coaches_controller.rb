@@ -7,11 +7,15 @@ class CoachesController < ApplicationController
   end
 
   def create
+    @coach = Coach.create!(coach_params)
+    redirect_to "/coaches"
   end
 
   def show
     @coach = Coach.find(params[:id])
   end
+
+  private
 
   def coach_params
     params.permit(:name, :club, :years_experience, :recruiting_athletes)
