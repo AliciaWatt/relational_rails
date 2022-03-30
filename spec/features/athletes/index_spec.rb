@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'athlete index' do
   it 'displays the list of athletes' do
-    franklin = Coach.create!(name: 'Missy Franklin')
-    doc = Coach.create!(name: 'Doc McStuffins')
+    franklin = Coach.create!(name: "Missy Franklin", club: "Dolphins", recruiting_athletes: true, years_experience: 2)
+    doc = Coach.create!(name: 'Doc McStuffins', club: "Bruins", recruiting_athletes: true, years_experience: 20)
     mayo = franklin.athletes.create!(name: 'Jo Mayo', rank: 2, championship_qualifier: true)
     wednesday = franklin.athletes.create!(name: 'Ash Wednesday', rank: 1, championship_qualifier: true)
     stanski = doc.athletes.create!(name: 'Staniel Stanski', rank: 3, championship_qualifier: true)
