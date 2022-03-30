@@ -31,6 +31,20 @@ RSpec.describe 'Coaches athletes index' do
     expect(page).to_not have_content(@andrews.name)
   end
 
+  it 'displays a link to take user to the Coaches Index' do
+
+    click_on "Coaches"
+
+    expect(current_path).to eq('/coaches')
+  end
+
+  it 'displays a link to take the user to the Athlete index' do
+
+    click_on "Athletes"
+
+    expect(current_path).to eq('/athletes')
+  end
+
   it 'links to each athletes show page' do
     visit "/coaches/#{@franklin.id}/athletes"
 
