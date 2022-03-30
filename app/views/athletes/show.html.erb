@@ -1,5 +1,11 @@
+<header>
+  <%= link_to "Coaches", "/coaches" %>
+  <%= link_to "Athletes", '/athletes' %>
+</header>
+<body>
 <h1><%= @athlete.name %></h1>
 <ul>
   <li><p>Ranking: <%= @athlete.rank %></p></li>
-  <li><p>Championship Qualifier: <%= @athlete.championship_qualifier %></p></li>
+  <li><p>Championship Qualifier? <%= @athlete.championship_qualifier %></p></li>
   </ul>
+  </body>

@@ -1,9 +1,14 @@
 <h1>Athletes</h1>
+<header>
+  <%= link_to "Coaches", "/coaches" %>
+  <%= link_to "Athletes", '/athletes' %>
+</header>
+<body>
 <% @athletes.each do |athlete| %>
 <h3><%= athlete.name %></h3>
 <ul>
   <li><p>Ranking: <%= athlete.rank %></p></li>
   <li><p>Championship Qualifier? <%= athlete.championship_qualifier %></p></li>
 </ul>
-
 <% end %>
+</body>
