@@ -5,7 +5,7 @@ class CoachAthletesController < ApplicationController
   end
 
   def new
-    @coach = Coach.find(params[:coach_id])
+    @coach = Coach.find(params[:coach])
   end
 
   def create

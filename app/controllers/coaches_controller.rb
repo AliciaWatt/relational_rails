@@ -25,6 +25,12 @@ class CoachesController < ApplicationController
     @coach = Coach.find(params[:id])
   end
 
+  def destroy
+    coach = Coach.find(params[:id])
+    coach.destroy
+    redirect_to '/coaches'
+  end
+
   private
 
   def coach_params

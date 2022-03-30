@@ -1,6 +1,6 @@
 class AthletesController < ApplicationController
   def index
-    @athletes = Athlete.all
+    @athletes = Athlete.championship_qualifier?
   end
 
   def show
@@ -15,6 +15,12 @@ class AthletesController < ApplicationController
     @athlete = Athlete.find(params[:id])
     @athlete.update(athlete_params)
     redirect_to "/athletes/#{@athlete.id}"
+  end
+
+  def destroy
+    athlete = Athlete.find(params[:id])
+    athlete.destroy
+    redirect_to "/athletes"
   end
 
   private
