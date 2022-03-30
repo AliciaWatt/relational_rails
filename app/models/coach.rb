@@ -5,4 +5,8 @@ class Coach < ApplicationRecord
   def self.desc_order
     order(created_at: :desc)
   end
+
+  def number_of_athletes
+    self.athletes.count
+  end
 end
