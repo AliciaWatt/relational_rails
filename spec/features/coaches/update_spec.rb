@@ -10,7 +10,7 @@ RSpec.describe 'Updating a Coach' do
 
     visit "/coaches/#{@franklin.id}"
 
-    click_link "Update Info"
+    click_link "Update Coach Info"
 
     expect(current_path).to eq("/coaches/#{@franklin.id}/edit")
   end

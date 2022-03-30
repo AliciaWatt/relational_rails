@@ -16,7 +16,7 @@ class CoachesController < ApplicationController
   end
 
   def update
-    @coach = Coaches.find(params[:id])
+    @coach = Coach.find(params[:id])
     @coach.update(edit_coach_params)
     redirect_to "/coaches/#{@coach.id}"
   end
