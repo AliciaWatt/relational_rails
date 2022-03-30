@@ -1,0 +1,16 @@
+<%= form_with url:"/athletes/#{@athlete_params.id}", method: :post, local: true do |form| %>
+<h4>Editing <%= @athlete.name %></h4>
+<p>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :rank %>
+  <%= form.number_field :rank %>
+</p>
+<p>
+  <%= form.label :"Championship Qualifier" %>
+  <%= form.check_box :championship_qualifier %>
+</p>
+<%= form.submit "Submit" %>
+<% end %>
