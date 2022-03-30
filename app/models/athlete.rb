@@ -1,3 +1,4 @@
 class Athlete < ApplicationRecord
-  belongs_to :coach, required: false
+  belongs_to :coach
 end
+# , required: false
