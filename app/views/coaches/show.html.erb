@@ -1,7 +1,13 @@
+<header>
+  <%= link_to "Coaches", "/coaches" %>
+
+</header>
+<body>
 <h1><%= @coach.name %></h1>
-<ul>
-<li><p>Club: <%= @coach.club %></p></li>
-<li><p>Total Number of Athletes: <%= @coach.number_of_athletes %></p></li>
-<li><p>Recruiting: <%= @coach.recruiting_athletes %></p></li>
-<li><p>Years of Experience: <%= @coach.years_experience %></p></li>
-</ul>
+
+<p>Club: <%= @coach.club %></p>
+<p>Years of Experience: <%= @coach.years_experience %></p>
+<p>Total Number of Athletes: <%= @coach.number_of_athletes %></p>
+<p>Recruiting: <%= @coach.recruiting_athletes %></p>
+
+</body>
