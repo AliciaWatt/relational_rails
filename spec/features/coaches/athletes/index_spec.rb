@@ -21,7 +21,7 @@ RSpec.describe 'Coaches athletes index' do
   scenario 'visitor sees the name of each athlete associated with a particular coach' do
     visit "/coaches/#{@franklin.id}/athletes"
 
-    # save_and_open_page
+    save_and_open_page
     expect(page).to have_content(@mayo.name)
     expect(page).to have_content(@mayo.rank)
     expect(page).to have_content(@mayo.championship_qualifier)
