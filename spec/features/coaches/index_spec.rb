@@ -27,4 +27,20 @@ RSpec.describe 'coaches index page' do
     expect(page).to have_content(federer.created_at)
     expect(page).to have_content(mac.created_at)
   end
+
+  scenario 'visitor sees a link to Coaches index' do
+
+    visit '/coaches'
+
+    click_link "Coaches"
+
+    expect(current_path).to eq('/coaches')
+  end
+
+  scenario 'visitor sees a link to Athletes Index' do
+
+    click_on "Athletes"
+
+    expect(current_path).to eq('/athletes')
+  end
 end
