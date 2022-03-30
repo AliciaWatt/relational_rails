@@ -1,6 +1,6 @@
 <h1>Coaches</h1>
 
-<% @coaches.each do |coach| %>
-<h3><%= coach.name %></h3>
+<% @coaches.desc_order.each do |coach| %>
+<h3><%= coach.name %> - Created at: <%=coach.created_at %></h3>
 
 <% end %>
