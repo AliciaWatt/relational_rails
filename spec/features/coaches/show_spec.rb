@@ -8,7 +8,7 @@ RSpec.describe 'coaches show page' do
 
     visit "/coaches/#{doc.id}"
 
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content(doc.name)
     expect(page).to have_content(doc.club)
     expect(page).to have_content(doc.recruiting_athletes)

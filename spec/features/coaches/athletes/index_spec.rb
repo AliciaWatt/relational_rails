@@ -15,7 +15,7 @@ RSpec.describe 'Coaches athletes index' do
   end
 
   scenario 'visitor sees the name of each athlete associated with a particular coach' do
-    
+
     # save_and_open_page
     expect(page).to have_content(@mayo.name)
     expect(page).to have_content(@mayo.rank)
@@ -40,11 +40,4 @@ RSpec.describe 'Coaches athletes index' do
     expect(current_path).to eq('/athletes')
   end
 
-  it 'links to each athletes show page' do
-    visit "/coaches/#{@franklin.id}/athletes"
-
-    click_on @mayo.name
-
-    expect(current_path).to eq("/athletes/#{@mayo.id}")
-  end
 end

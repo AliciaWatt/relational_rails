@@ -12,5 +12,5 @@
 
   <footer>
     <%= link_to "Update Information", "/athletes/#{@athlete.id}/edit" %>
-    <%= button_to "Delete this Athlete", "/athletes/#{@athlete.id}", method: :delete %>
+    <%= link_to "Delete this Athlete", "/athletes/#{@athlete.id}", method: :delete %>
   </footer>
