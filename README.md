@@ -1,24 +1,6 @@
-# README
+# Relational Rails
+##Turing 2201 Back End Module 2: Relational Rails Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Coaches - Athletes
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<img width="606" alt="3C45B5E6-28A9-479F-9381-B9C62599DBCD" src="https://user-images.githubusercontent.com/81201783/160951162-eb48c682-dff1-4638-92d2-d961643ea338.png">
