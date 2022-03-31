@@ -1,11 +1,15 @@
 class CoachAthletesController < ApplicationController
   def index
     @coach = Coach.find(params[:coach_id])
-    @athletes = @coach.athletes
+    if params[:sort] == 'asc'
+      @athletes = @coach.athletes.alphbabetize
+    else
+      @athletes = @coach.athletes
+    end
   end
 
   def new
-    @coach = Coach.find(params[:coach])
+    @coach = Coach.find(params[:coach_id])
   end
 
   def create

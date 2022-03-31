@@ -21,7 +21,7 @@ RSpec.describe 'New athlete for coach' do
     fill_in('rank', with: 9)
     check('championship_qualifier')
 
-    click_button("Create Athlete")
+    click_on("Create Athlete")
     expect(current_path).to eq("/coaches/#{@doc.id}/athletes")
     expect(page).to have_content('Grizzly Bearet')
     expect(page).to have_content('9')

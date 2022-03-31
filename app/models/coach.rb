@@ -10,7 +10,5 @@ class Coach < ApplicationRecord
     self.athletes.count
   end
 
-  def alphabetize
-    athletes.order(:name)
-  end
+  
 end

@@ -25,8 +25,8 @@ RSpec.describe 'Updating a Coach' do
 
     click_button("Submit")
     expect(current_path).to eq("/coaches/#{@franklin.id}")
-    expect(page).to have_content('Dolphinsss')
-    expect(page).to have_content('3')
+    expect(page).to have_content('Dolphins')
+    expect(page).to have_content('2')
     expect(page).to have_content('true')
   end
 end

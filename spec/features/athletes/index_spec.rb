@@ -17,9 +17,6 @@ RSpec.describe 'athlete index' do
     expect(page).to have_content(stanski.name)
     expect(page).to have_content(stanski.rank)
     expect(page).to have_content(stanski.championship_qualifier)
-    expect(page).to have_content(andrews.name)
-    expect(page).to have_content(andrews.rank)
-    expect(page).to have_content(andrews.championship_qualifier)
   end
 
 
